@@ -43,7 +43,7 @@ function initializeData(imageWrapper) {
 function initInputStream(cb) {
     var video;
     if (_config.inputStream.type === "VideoStream") {
-        video = document.createElement("video");
+        video = _config.video || document.createElement("video");
         _inputStream = InputStream.createVideoStream(video);
     } else if (_config.inputStream.type === "ImageStream") {
         _inputStream = InputStream.createImageStream();
